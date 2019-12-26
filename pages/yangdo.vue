@@ -28,6 +28,10 @@
                         <v-btn class="btn" color="white" style="min-width:50%; max-width:50%;">비사업용토지</v-btn>
                         <v-btn class="btn" color="white" style="min-width:100%; max-width:100%;">기타 부동산(사업용 토지, 분양권 등)</v-btn>
                     </v-btn-toggle>
+                </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+                <v-list-item-content>
                     <v-list-item-title>주택자 구분</v-list-item-title>
                     <v-btn-toggle
                         v-model="text"

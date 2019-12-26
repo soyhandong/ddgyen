@@ -13,49 +13,97 @@
                         cols="1"
                         style="min-width:50%; max-width:50%;"
                         class="flex-grow-1 flex-shrink-0; text-center">
-                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/yangdo">양도소득세</v-card>
+                        <v-card
+                            class="pa-2"
+                            outlined="outlined"
+                            tile="tile"
+                            height="150"
+                            nuxt="nuxt"
+                            to="/yangdo">양도소득세</v-card>
                     </v-col>
                     <v-col
                         cols="1"
                         style="min-width:50%; max-width:50%;"
                         class="flex-grow-1 flex-shrink-0; text-center">
-                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/chwideug">취득세</v-card>
+                        <v-card
+                            class="pa-2"
+                            outlined="outlined"
+                            tile="tile"
+                            height="150"
+                            nuxt="nuxt"
+                            to="/chwideug">취득세</v-card>
                     </v-col>
                     <v-col
                         cols="1"
                         style="min-width:50%; max-width:50%;"
                         class="flex-grow-1 flex-shrink-0; text-center">
-                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/tuja">투자수익률</v-card>
+                        <v-card
+                            class="pa-2"
+                            outlined="outlined"
+                            tile="tile"
+                            height="150"
+                            nuxt="nuxt"
+                            to="/tuja">투자수익률</v-card>
                     </v-col>
                     <v-col
                         cols="1"
                         style="min-width:50%; max-width:50%;"
                         class="flex-grow-1 flex-shrink-0; text-center">
-                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/jeungyeo">증여세</v-card>
+                        <v-card
+                            class="pa-2"
+                            outlined="outlined"
+                            tile="tile"
+                            height="150"
+                            nuxt="nuxt"
+                            to="/jeungyeo">증여세</v-card>
                     </v-col>
                     <v-col
                         cols="1"
                         style="min-width:50%; max-width:50%;"
                         class="flex-grow-1 flex-shrink-0; text-center">
-                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/goonggae">중개보수료</v-card>
+                        <v-card
+                            class="pa-2"
+                            outlined="outlined"
+                            tile="tile"
+                            height="150"
+                            nuxt="nuxt"
+                            to="/goonggae">중개보수료</v-card>
                     </v-col>
                     <v-col
                         cols="1"
                         style="min-width:50%; max-width:50%;"
                         class="flex-grow-1 flex-shrink-0; text-center">
-                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/doro">도로명주소</v-card>
+                        <v-card
+                            class="pa-2"
+                            outlined="outlined"
+                            tile="tile"
+                            height="150"
+                            nuxt="nuxt"
+                            to="/doro">도로명주소</v-card>
                     </v-col>
                     <v-col
                         cols="1"
                         style="min-width:50%; max-width:50%;"
                         class="flex-grow-1 flex-shrink-0; text-center">
-                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/pyeongsu">평수/이자</v-card>
+                        <v-card
+                            class="pa-2"
+                            outlined="outlined"
+                            tile="tile"
+                            height="150"
+                            nuxt="nuxt"
+                            to="/pyeongsu">평수/이자</v-card>
                     </v-col>
                     <v-col
                         cols="1"
                         style="min-width:50%; max-width:50%;"
                         class="flex-grow-1 flex-shrink-0; text-center">
-                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/iza">이자계산기</v-card>
+                        <v-card
+                            class="pa-2"
+                            outlined="outlined"
+                            tile="tile"
+                            height="150"
+                            nuxt="nuxt"
+                            to="/iza">이자계산기</v-card>
                     </v-col>
                 </v-row>
             </v-flex>
@@ -66,10 +114,5 @@
         import Logo from '~/components/Logo.vue'
         import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
-        export default {
-            components: {
-                Logo,
-                VuetifyLogo
-            }
-        }
+        export default {}
     </script>

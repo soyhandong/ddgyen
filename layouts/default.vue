@@ -1,5 +1,5 @@
 <template>
-    <v-app background-color="white">
+    <v-app>
         <v-navigation-drawer
             v-model="drawer"
             :mini-variant="miniVariant"
@@ -28,18 +28,19 @@
             fixed="fixed"
             app="app"
             color="white"
-            flat="flat"
-            >
+            flat="flat">
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
             <v-toolbar-title>ddgye</v-toolbar-title>
             <v-spacer/>
         </v-app-bar>
 
-        <v-content>
-            <v-container>
-                <nuxt/>
-            </v-container>
-        </v-content>
+        <div class="wcolor">
+            <v-content>
+                <v-container>
+                    <nuxt/>
+                </v-container>
+            </v-content>
+        </div>
 
     </v-app>
 </template>
@@ -102,5 +103,8 @@
     .being {
         display: flex;
         justify-content: center;
+    }
+    .wcolor {
+        background: white;
     }
 </style>

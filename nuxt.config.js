@@ -37,7 +37,9 @@ export default {
     /*
   ** Global CSS
   */
-    css: [],
+    css: [
+      
+    ],
     /*
   ** Plugins to load before mounting the App
   */
@@ -56,7 +58,7 @@ export default {
   */
     vuetify: {
         customVariables: ['~/assets/variables.scss'],
-        theme: { light: true,
+        theme: {
             themes: {
               light: {
                 primary: colors.white,
