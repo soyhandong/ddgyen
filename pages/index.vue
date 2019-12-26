@@ -1,92 +1,75 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
-</template>
+    <v-layout column="column">
 
-<script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+        <v-flex xs12="xs12" sm8="sm8" md6="md6">
 
-export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
-}
-</script>
+            <v-flex class="text-center" align-center="align-center">
+                <img src="/rsmalllogo.png" alt="Vuetify.js" class="mb-5"></v-flex>
+                <div class="text-center">
+                    <p>어떤 계산기를 찾고 계신가요?</p>
+                </div>
+                <v-row no-gutters="no-gutters" style="flex-wrap: wrap;">
+                    <v-col
+                        cols="1"
+                        style="min-width:50%; max-width:50%;"
+                        class="flex-grow-1 flex-shrink-0; text-center">
+                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/yangdo">양도소득세</v-card>
+                    </v-col>
+                    <v-col
+                        cols="1"
+                        style="min-width:50%; max-width:50%;"
+                        class="flex-grow-1 flex-shrink-0; text-center">
+                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/chwideug">취득세</v-card>
+                    </v-col>
+                    <v-col
+                        cols="1"
+                        style="min-width:50%; max-width:50%;"
+                        class="flex-grow-1 flex-shrink-0; text-center">
+                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/tuja">투자수익률</v-card>
+                    </v-col>
+                    <v-col
+                        cols="1"
+                        style="min-width:50%; max-width:50%;"
+                        class="flex-grow-1 flex-shrink-0; text-center">
+                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/jeungyeo">증여세</v-card>
+                    </v-col>
+                    <v-col
+                        cols="1"
+                        style="min-width:50%; max-width:50%;"
+                        class="flex-grow-1 flex-shrink-0; text-center">
+                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/goonggae">중개보수료</v-card>
+                    </v-col>
+                    <v-col
+                        cols="1"
+                        style="min-width:50%; max-width:50%;"
+                        class="flex-grow-1 flex-shrink-0; text-center">
+                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/doro">도로명주소</v-card>
+                    </v-col>
+                    <v-col
+                        cols="1"
+                        style="min-width:50%; max-width:50%;"
+                        class="flex-grow-1 flex-shrink-0; text-center">
+                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/pyeongsu">평수/이자</v-card>
+                    </v-col>
+                    <v-col
+                        cols="1"
+                        style="min-width:50%; max-width:50%;"
+                        class="flex-grow-1 flex-shrink-0; text-center">
+                        <v-card class="pa-2" outlined="outlined" tile="tile" height="150" nuxt="nuxt" to="/iza">이자계산기</v-card>
+                    </v-col>
+                </v-row>
+            </v-flex>
+        </v-layout>
+    </template>
+
+    <script>
+        import Logo from '~/components/Logo.vue'
+        import VuetifyLogo from '~/components/VuetifyLogo.vue'
+
+        export default {
+            components: {
+                Logo,
+                VuetifyLogo
+            }
+        }
+    </script>
