@@ -22,7 +22,6 @@
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
-
         <v-app-bar
             :clipped-left="clipped"
             fixed="fixed"
@@ -33,7 +32,6 @@
             <v-toolbar-title>ddgye</v-toolbar-title>
             <v-spacer/>
         </v-app-bar>
-
         <div class="wcolor">
             <v-content>
                 <v-container>

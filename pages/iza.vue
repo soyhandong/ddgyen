@@ -5,17 +5,29 @@
                 <v-list-item-content>
                     <v-list-item-title>대상물 구분</v-list-item-title>
                     <v-btn-toggle
-                        v-model="text"
+                        v-model="text1"
                         tile="tile"
                         color="green"
                         style="flex-wrap: wrap; min-width:100%; max-width:100%;">
-                        <v-btn class="btn" color="white" style="min-width:33%; max-width:33%;">원리금균등</v-btn>
-                        <v-btn class="btn" color="white" style="min-width:33%; max-width:33%;">원금균등</v-btn>
-                        <v-btn class="btn" color="white" style="min-width:34%; max-width:34%;">만기일시</v-btn>
+                        <v-btn
+                            class="btn"
+                            value="a1"
+                            color="white"
+                            style="min-width:33%; max-width:33%;">원리금균등</v-btn>
+                        <v-btn
+                            class="btn"
+                            value="a2"
+                            color="white"
+                            style="min-width:33%; max-width:33%;">원금균등</v-btn>
+                        <v-btn
+                            class="btn"
+                            value="a3"
+                            color="white"
+                            style="min-width:34%; max-width:34%;">만기일시</v-btn>
                     </v-btn-toggle>
                 </v-list-item-content>
             </v-list-item>
-            
+
             <v-list-item>
                 <v-list-item-content>
                     <v-row>
@@ -23,7 +35,7 @@
                             <v-subheader color="green darken-4">대출기간</v-subheader>
                         </v-col>
                         <v-col cols="7">
-                            <v-text-field placeholder="매매가를 입력하세요" suffix="개월"></v-text-field>
+                            <v-text-field placeholder="매매가 입력" suffix="개월"></v-text-field>
                         </v-col>
                     </v-row>
                     <v-row>
@@ -31,7 +43,7 @@
                             <v-subheader color="green darken-4">대출금액</v-subheader>
                         </v-col>
                         <v-col cols="7">
-                            <v-text-field placeholder="매매가를 입력하세요" suffix="만원"></v-text-field>
+                            <v-text-field placeholder="매매가 입력" suffix="만원"></v-text-field>
                         </v-col>
                     </v-row>
                     <v-row>
@@ -39,7 +51,7 @@
                             <v-subheader color="green darken-4">연이자율</v-subheader>
                         </v-col>
                         <v-col cols="7">
-                            <v-text-field placeholder="매매가를 입력하세요" suffix="%"></v-text-field>
+                            <v-text-field placeholder="매매가 입력" suffix="%"></v-text-field>
                         </v-col>
                     </v-row>
                     <v-row>
@@ -47,7 +59,7 @@
                             <v-subheader color="green darken-4">거치기간</v-subheader>
                         </v-col>
                         <v-col cols="7">
-                            <v-text-field placeholder="매매가를 입력하세요" suffix="개월"></v-text-field>
+                            <v-text-field placeholder="매매가 입력" suffix="개월"></v-text-field>
                         </v-col>
                     </v-row>
                 </v-list-item-content>
@@ -62,7 +74,12 @@
 
 </template>
 <script>
-    export default {name: 'chwideug'}
+    export default {
+        name: 'chwideug',
+        data() {
+            return {text1: 'a1'}
+        }
+    }
 </script>
 
 <style scoped="scoped">

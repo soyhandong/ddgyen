@@ -4,10 +4,10 @@
             <v-list-item>
                 <v-list-item-content>
                     <v-col cols="6">
-                        <v-text-field placeholder="제곱미터입력" suffix="m^2"></v-text-field>
+                        <v-text-field placeholder="평수입력" suffix="평"></v-text-field>
                     </v-col>
                     <v-col cols="6">
-                        <v-text-field placeholder="평수입력" suffix="평"></v-text-field>
+                        <v-text-field placeholder="제곱미터입력" suffix="m^2"></v-text-field>
                     </v-col>
                 </v-list-item-content>
             </v-list-item>
