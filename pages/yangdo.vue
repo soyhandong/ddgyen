@@ -127,7 +127,7 @@
                         </v-menu>
                     </v-col>
                     <v-col cols="6">
-                        <v-text-field class="caption;" placeholder="양도가액" suffix="만원"></v-text-field>
+                        <v-text-field class="caption" placeholder="양도가액" suffix="만원"></v-text-field>
                     </v-col>
 
                     <v-col cols="6">
