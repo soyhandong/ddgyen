@@ -60,7 +60,7 @@
                             <v-row justify="center">
                                 <v-dialog v-model="dialog" width="600px">
                                     <template v-slot:activator="{ on }">
-                                        <v-btn outlined="outlined" color="black" v-on="on">보기</v-btn>
+                                        <v-btn color="primary" v-on="on">보기</v-btn>
                                     </template>
                                     <v-card>
                                         <v-card-title>
