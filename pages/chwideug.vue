@@ -3,24 +3,27 @@
         <v-flex wrap="wrap">
             <v-list-item>
                 <v-list-item-content>
-                    <v-list-item-title>대상물 구분</v-list-item-title>
+                    <v-list-item-title class="font-weight-black">대상물 구분</v-list-item-title>
                     <v-btn-toggle
                         v-model="text1"
                         tile="tile"
                         color="green"
                         style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="a1"
                             color="white"
                             style="min-width:50%; max-width:50%;">주택</v-btn>
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="a2"
                             color="white"
                             style="min-width:50%; max-width:50%;">농지</v-btn>
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="a3"
                             color="white"
                             style="min-width:100%; max-width:100%;">토지,건물,오피스텔</v-btn>
@@ -30,30 +33,34 @@
 
             <v-list-item>
                 <v-list-item-content>
-                    <v-list-item-title>취득 구분</v-list-item-title>
+                    <v-list-item-title class="font-weight-black">취득 구분</v-list-item-title>
                     <v-btn-toggle
                         v-model="text2"
                         tile="tile"
                         color="green"
                         style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="b1"
                             color="white"
                             style="min-width:25%; max-width:25%;">매매</v-btn>
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="b2"
                             color="white"
                             style="min-width:25%; max-width:25%;">증여</v-btn>
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="b3"
                             color="white"
                             style="min-width:25%; max-width:25%;">상속</v-btn>
                         <v-btn
                             v-if="(text1=='a1')||(text1=='a3')"
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="b4"
                             color="white"
                             style="min-width:25%; max-width:25%;">신축</v-btn>
@@ -70,12 +77,14 @@
                             color="green"
                             style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                             <v-btn
-                                class="btn"
+                                class="btn; caption"
+                                height="40px"
                                 value="c1"
                                 color="white"
                                 style="min-width:100%; max-width:100%;">85m^2 이하(읍, 면지역은 100m^2)</v-btn>
                             <v-btn
-                                class="btn"
+                                class="btn; caption"
+                                height="40px"
                                 value="c2"
                                 color="white"
                                 style="min-width:100%; max-width:100%;">85m^2 초과(읍, 면지역은 100m^2)</v-btn>
@@ -83,7 +92,7 @@
                     </v-list-item-content>
                 </v-list-item>
             </div>
-            
+
             <div v-if="(text1=='a2')&&(text2=='b1')">
                 <v-list-item>
                     <v-list-item-content>
@@ -93,12 +102,14 @@
                             color="green"
                             style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                             <v-btn
-                                class="btn"
+                                class="btn; caption"
+                                height="40px"
                                 value="d1"
                                 color="white"
                                 style="min-width:50%; max-width:50%;">신규</v-btn>
                             <v-btn
-                                class="btn"
+                                class="btn; caption"
+                                height="40px"
                                 value="d2"
                                 color="white"
                                 style="min-width:50%; max-width:50%;">2년 이상 자경</v-btn>
@@ -110,17 +121,17 @@
             <v-list-item>
                 <v-list-item-content>
                     <v-col cols="7">
-                        <v-list-item-title>취득가액</v-list-item-title>
+                        <v-list-item-title class="font-weight-black">취득가액</v-list-item-title>
                     </v-col>
                     <v-col cols="5">
                         <v-row justify="center">
                             <v-dialog v-model="dialog" width="600px">
                                 <template v-slot:activator="{ on }">
-                                    <v-btn color="black" dark="dark" v-on="on">보기</v-btn>
+                                    <v-btn class="caption" color="black" dark="dark" v-on="on">보기</v-btn>
                                 </template>
                                 <v-card>
                                     <v-card-title>
-                                        <span class="headline">취득가액 산정방법</span>
+                                        <span class="headline;">취득가액 산정방법</span>
                                     </v-card-title>
                                     <v-card-text>・ 매매, 분양, 경매 등 개인간의 유상거래일 때는 신고가액 (실제 거래가격을 의미하며, 신고를 하지 않거나 신고 금액이
                                         시가표준액에 미달 또는 신고 가액 표시가 없는 경우 시가표준액으로 계산함)
@@ -141,10 +152,10 @@
                                             </v-col>
                                             <v-row>
                                                 <v-col cols="4">
-                                                    <v-subheader color="green darken-4">취득가액</v-subheader>
+                                                    <v-subheader class="caption" color="green darken-4">취득가액</v-subheader>
                                                 </v-col>
                                                 <v-col cols="7">
-                                                    <v-text-field placeholder="취득가액 입력" suffix="만원"></v-text-field>
+                                                    <v-text-field class="caption" placeholder="취득가액 입력" suffix="만원"></v-text-field>
                                                 </v-col>
                                             </v-row>
                                         </v-list-item-content>

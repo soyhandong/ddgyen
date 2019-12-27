@@ -4,19 +4,21 @@
         <v-flex wrap="wrap">
             <v-list-item>
                 <v-list-item-content>
-                    <v-list-item-title>대상물의 등기 여부</v-list-item-title>
+                    <v-list-item-title class="font-weight-black">대상물의 등기 여부</v-list-item-title>
                     <v-btn-toggle
                         v-model="text1"
                         tile="tile"
                         color="green"
                         style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                         <v-btn
-                            class="btn"
+                            class="caption"
+                            height="40px"
                             value="a1"
                             color="white"
                             style="min-width:50%; max-width:50%;">등기</v-btn>
                         <v-btn
-                            class="btn"
+                            class="caption"
+                            height="40px"
                             value="a2"
                             color="white"
                             style="min-width:50%; max-width:50%;">미등기</v-btn>
@@ -26,24 +28,27 @@
             <div v-if="text1=='a1'">
                 <v-list-item>
                     <v-list-item-content>
-                        <v-list-item-title>대상물 구분</v-list-item-title>
+                        <v-list-item-title class="font-weight-black">대상물 구분</v-list-item-title>
                         <v-btn-toggle
                             v-model="text2"
                             tile="tile"
                             color="green"
                             style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                             <v-btn
-                                class="btn"
+                                class="caption"
+                                height="40px"
                                 value="b1"
                                 color="white"
                                 style="min-width:50%; max-width:50%;">주택</v-btn>
                             <v-btn
-                                class="btn"
+                                class="caption"
+                                height="40px"
                                 value="b2"
                                 color="white"
                                 style="min-width:50%; max-width:50%;">비사업용토지</v-btn>
                             <v-btn
-                                class="btn"
+                                class="caption"
+                                height="40px"
                                 value="b3"
                                 color="white"
                                 style="min-width:100%; max-width:100%;">기타 부동산(사업용 토지, 분양권 등)</v-btn>
@@ -54,7 +59,7 @@
                     <v-list-item>
                     <v-list-item-content>
                         <v-col cols="8">
-                            <v-list-item-title>일시적 1가구 2주택 조건</v-list-item-title>
+                            <v-list-item-title class="font-weight-black">일시적 1가구 2주택 조건</v-list-item-title>
                         </v-col>
                         <v-col cols="4">
                             <v-row justify="center">
@@ -82,12 +87,14 @@
                             color="green"
                             style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                             <v-btn
-                                class="btn"
+                                class="caption"
+                                height="40px"
                                 value="c1"
                                 color="white"
                                 style="min-width:50%; max-width:50%;">1주택자(일시적2주택자)</v-btn>
                             <v-btn
-                                class="btn"
+                                class="caption"
+                                height="40px"
                                 value="c2"
                                 color="white"
                                 style="min-width:50%; max-width:50%;">2주택자이상</v-btn>
@@ -99,7 +106,7 @@
 
             <v-list-item>
                 <v-list-item-content>
-                    <v-list-item-title>금액</v-list-item-title>
+                    <v-list-item-title class="font-weight-black">금액</v-list-item-title>
 
                     <v-col cols="6">
                         <v-menu
@@ -111,16 +118,16 @@
                             offset-y="offset-y"
                             min-width="290px">
                             <template v-slot:activator="{ on }">
-                                <v-text-field v-model="date" label="양도일선택" readonly="readonly" v-on="on"></v-text-field>
+                                <v-text-field class="caption" v-model="date" label="양도일선택" readonly="readonly" v-on="on"></v-text-field>
                             </template>
                             <v-date-picker v-model="date" no-title="no-title" scrollable="scrollable">
-                                <v-btn text="text" color="primary" @click="menu = false">Cancel</v-btn>
-                                <v-btn text="text" color="primary" @click="$refs.menu.save(date)">OK</v-btn>
+                                <v-btn class="caption" text="text" color="primary" @click="menu = false">Cancel</v-btn>
+                                <v-btn class="caption" text="text" color="primary" @click="$refs.menu.save(date)">OK</v-btn>
                             </v-date-picker>
                         </v-menu>
                     </v-col>
                     <v-col cols="6">
-                        <v-text-field placeholder="양도가액" suffix="만원"></v-text-field>
+                        <v-text-field class="caption;" placeholder="양도가액" suffix="만원"></v-text-field>
                     </v-col>
 
                     <v-col cols="6">
@@ -133,23 +140,23 @@
                             offset-y="offset-y"
                             min-width="290px">
                             <template v-slot:activator="{ on }">
-                                <v-text-field v-model="date" label="취득일선택" readonly="readonly" v-on="on"></v-text-field>
+                                <v-text-field class="caption" v-model="date2" label="취득일선택" readonly="readonly" v-on="on"></v-text-field>
                             </template>
-                            <v-date-picker v-model="date" no-title="no-title" scrollable="scrollable">
-                                <v-btn text="text" color="primary" @click="menu2 = false">Cancel</v-btn>
-                                <v-btn text="text" color="primary" @click="$refs.menu2.save(date)">OK</v-btn>
+                            <v-date-picker v-model="date2" no-title="no-title" scrollable="scrollable">
+                                <v-btn class="caption" text="text" color="primary" @click="menu2 = false">Cancel</v-btn>
+                                <v-btn class="caption" text="text" color="primary" @click="$refs.menu2.save(date)">OK</v-btn>
                             </v-date-picker>
                         </v-menu>
                     </v-col>
                     <v-col cols="6">
-                        <v-text-field placeholder="취득가액" suffix="만원"></v-text-field>
+                        <v-text-field class="caption" placeholder="취득가액" suffix="만원"></v-text-field>
                     </v-col>
                     <v-row>
                         <v-col cols="4">
-                            <v-subheader color="green darken-4">소요경비</v-subheader>
+                            <v-subheader class="caption" color="green darken-4">소요경비</v-subheader>
                         </v-col>
                         <v-col cols="7">
-                            <v-text-field placeholder="소요경비 입력" suffix="만원"></v-text-field>
+                            <v-text-field class="caption" placeholder="소요경비 입력" suffix="만원"></v-text-field>
                         </v-col>
                     </v-row>
                 </v-list-item-content>

@@ -87,6 +87,10 @@
                         icon: 'mdi-chart-bubble',
                         title: '이자 계산기',
                         to: '/iza'
+                    }, {
+                        icon: 'mdi-chart-bubble',
+                        title: 'chal',
+                        to: '/chal'
                     }
                 ],
                 miniVariant: false,

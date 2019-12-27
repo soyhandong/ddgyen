@@ -3,34 +3,39 @@
         <v-flex wrap="wrap">
             <v-list-item>
                 <v-list-item-content>
-                    <v-list-item-title>대상물 구분</v-list-item-title>
+                    <v-list-item-title class="font-weight-black">대상물 구분</v-list-item-title>
                     <v-btn-toggle
                         v-model="text1"
                         tile="tile"
                         color="green"
                         style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="a1"
                             color="white"
                             style="min-width:50%; max-width:50%;">배우자</v-btn>
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="a2"
                             color="white"
                             style="min-width:50%; max-width:50%;">직계존속</v-btn>
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="a3"
                             color="white"
                             style="min-width:33%; max-width:33%;">직계비속</v-btn>
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="a4"
                             color="white"
                             style="min-width:33%; max-width:33%;">기타친족</v-btn>
                         <v-btn
-                            class="btn"
+                            class="btn; caption"
+                            height="40px"
                             value="a5"
                             color="white"
                             style="min-width:34%; max-width:34%;">타인</v-btn>
@@ -41,7 +46,7 @@
                 <v-row justify="end">
                     <v-dialog v-model="dialog" width="600px">
                         <template v-slot:activator="{ on }">
-                            <v-btn color="black" dark="dark" v-on="on">용어정리</v-btn>
+                            <v-btn class="caption" color="black" dark="dark" v-on="on">용어정리</v-btn>
                         </template>
                         <v-card>
                             <v-card-title>
@@ -82,19 +87,21 @@
                                                                         <div v-if="text1=='a2'">
                                                                             <v-list-item>
                                                                                 <v-list-item-content>
-                                                                                    <v-list-item-title>수증자 연령 구분</v-list-item-title>
+                                                                                    <v-list-item-title class="font-weight-black">수증자 연령 구분</v-list-item-title>
                                                                                     <v-btn-toggle
                                                                                         v-model="text2"
                                                                                         tile="tile"
                                                                                         color="green"
                                                                                         style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                                                                                         <v-btn
-                                                                                            class="btn"
+                                                                                            class="btn; caption"
+                                                                                            height="40px"
                                                                                             value="b1"
                                                                                             color="white"
                                                                                             style="min-width:50%; max-width:50%;">성년</v-btn>
                                                                                         <v-btn
-                                                                                            class="btn"
+                                                                                            class="btn; caption"
+                                                                                            height="40px"
                                                                                             value="b2"
                                                                                             color="white"
                                                                                             style="min-width:50%; max-width:50%;">미성년</v-btn>
@@ -103,19 +110,21 @@
                                                                             </v-list-item>
                                                                             <v-list-item>
                                                                                 <v-list-item-content>
-                                                                                    <v-list-item-title>수증자 - 증여자 관계 구분</v-list-item-title>
+                                                                                    <v-list-item-title class="font-weight-black">수증자 - 증여자 관계 구분</v-list-item-title>
                                                                                     <v-btn-toggle
                                                                                         v-model="text3"
                                                                                         tile="tile"
                                                                                         color="green"
                                                                                         style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                                                                                         <v-btn
-                                                                                            class="btn"
+                                                                                            class="btn; caption"
+                                                                                            height="40px"
                                                                                             value="c1"
                                                                                             color="white"
                                                                                             style="min-width:50%; max-width:50%;">세대 생략인 경우</v-btn>
                                                                                         <v-btn
-                                                                                            class="btn"
+                                                                                            class="btn; caption"
+                                                                                            height="40px"
                                                                                             value="c2"
                                                                                             color="white"
                                                                                             style="min-width:50%; max-width:50%;">세대 생략이 아닌 경우</v-btn>
@@ -128,10 +137,10 @@
                                                                             <v-list-item-content>
                                                                                 <v-row>
                                                                                     <v-col cols="4">
-                                                                                        <v-subheader color="green darken-4">증여금액</v-subheader>
+                                                                                        <v-subheader class="caption" color="green darken-4">증여금액</v-subheader>
                                                                                     </v-col>
                                                                                     <v-col cols="7">
-                                                                                        <v-text-field placeholder="증여금액 입력" suffix="만원"></v-text-field>
+                                                                                        <v-text-field class="caption" placeholder="증여금액 입력" suffix="만원"></v-text-field>
                                                                                     </v-col>
                                                                                 </v-row>
                                                                             </v-list-item-content>

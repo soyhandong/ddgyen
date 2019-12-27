@@ -19,7 +19,7 @@
                             tile="tile"
                             height="150"
                             nuxt="nuxt"
-                            to="/yangdo">양도소득세</v-card>
+                            to="/chwideug">양도소득세</v-card>
                     </v-col>
                     <v-col
                         cols="1"
@@ -32,7 +32,7 @@
                             height="150"
                             nuxt="nuxt"
                             to="/chwideug">취득세</v-card>
-                    </v-col>
+                    </v-col>                    
                     <v-col
                         cols="1"
                         style="min-width:50%; max-width:50%;"
@@ -43,7 +43,7 @@
                             tile="tile"
                             height="150"
                             nuxt="nuxt"
-                            to="/tuja">투자수익률</v-card>
+                            to="/pyeongsu">투자수익률</v-card>
                     </v-col>
                     <v-col
                         cols="1"
@@ -91,7 +91,7 @@
                             tile="tile"
                             height="150"
                             nuxt="nuxt"
-                            to="/pyeongsu">평수/이자</v-card>
+                            to="/pyeongsu">평수환산</v-card>
                     </v-col>
                     <v-col
                         cols="1"
@@ -103,7 +103,7 @@
                             tile="tile"
                             height="150"
                             nuxt="nuxt"
-                            to="/iza">이자계산기</v-card>
+                            to="/pyeongsu">이자계산기</v-card>
                     </v-col>
                 </v-row>
             </v-flex>
@@ -116,3 +116,4 @@
 
         export default {}
     </script>
+    

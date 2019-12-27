@@ -17,7 +17,7 @@
                                 </v-card-text>
                                 <v-card-actions>
                                     <v-spacer></v-spacer>
-                                    <v-btn color="green darken-1" text="text" @click="dialog = false">OK</v-btn>
+                                    <v-btn class="caption" color="green darken-1" text="text" @click="dialog = false">OK</v-btn>
                                 </v-card-actions>
                             </v-card>
                         </v-dialog>
@@ -25,42 +25,42 @@
                 </v-col>
                 <v-row>
                     <v-col cols="4">
-                        <v-subheader color="green darken-4">매수가격</v-subheader>
+                        <v-subheader class="caption" color="green darken-4">매수가격</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field placeholder="부동산을 매수할 금액" suffix="만원"></v-text-field>
+                        <v-text-field class="caption" placeholder="부동산을 매수할 금액" suffix="만원"></v-text-field>
                     </v-col>
                 </v-row>
                 <v-row>
                     <v-col cols="4">
-                        <v-subheader color="green darken-4">투입자본</v-subheader>
+                        <v-subheader class="caption" color="green darken-4">투입자본</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field placeholder="투입할 자본금액" suffix="만원"></v-text-field>
+                        <v-text-field class="caption" placeholder="투입할 자본금액" suffix="만원"></v-text-field>
                     </v-col>
                 </v-row>
                 <v-row>
                     <v-col cols="4">
-                        <v-subheader color="green darken-4">보증금</v-subheader>
+                        <v-subheader class="caption" color="green darken-4">보증금</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field placeholder="임대 보증금" suffix="만원"></v-text-field>
+                        <v-text-field class="caption" placeholder="임대 보증금" suffix="만원"></v-text-field>
                     </v-col>
                 </v-row>
                 <v-row>
                     <v-col cols="4">
-                        <v-subheader color="green darken-4">월세</v-subheader>
+                        <v-subheader class="caption" color="green darken-4">월세</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field placeholder="월 임대료" suffix="만원"></v-text-field>
+                        <v-text-field class="caption" placeholder="월 임대료" suffix="만원"></v-text-field>
                     </v-col>
                 </v-row>
                 <v-row>
                     <v-col cols="4">
-                        <v-subheader color="green darken-4">대출 금리</v-subheader>
+                        <v-subheader class="caption" color="green darken-4">대출 금리</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field placeholder="이자율" suffix="(연 %)"></v-text-field>
+                        <v-text-field class="caption" placeholder="이자율" suffix="(연 %)"></v-text-field>
                     </v-col>
                 </v-row>
 
