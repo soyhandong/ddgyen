@@ -5,7 +5,7 @@
                 <v-row justify="end">
                     <v-dialog v-model="dialog" width="600px">
                         <template v-slot:activator="{ on }">
-                            <v-btn color="black" v-on="on">투자 수익률이란?</v-btn>
+                            <v-btn color="black" dark="dark" v-on="on">투자 수익률이란?</v-btn>
                         </template>
                         <v-card>
                             <v-card-title>
