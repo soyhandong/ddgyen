@@ -1,6 +1,6 @@
 <template>
-    <v-layout column="column">
-
+    <v-app>
+        <v-layout column="column">
         <v-flex xs12="xs12" sm8="sm8" md6="md6">
 
             <v-flex class="text-center" align-center="align-center">
@@ -108,12 +108,10 @@
                 </v-row>
             </v-flex>
         </v-layout>
+    </v-app>
     </template>
 
     <script>
-        import Logo from '~/components/Logo.vue'
-        import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
         export default {}
     </script>
     

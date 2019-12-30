@@ -1,5 +1,4 @@
 <template>
-
     <v-layout column="column" row="row">
         <v-flex wrap="wrap">
             <v-list-item>
@@ -9,15 +8,16 @@
                         v-model="text1"
                         tile="tile"
                         color="green"
-                        style="flex-wrap: wrap; min-width:100%; max-width:100%;">
+                        style="flex-wrap: wrap; min-width:100%; max-width:100%;"
+                        group>
                         <v-btn
-                            class="btn; caption"
+                            class="caption"
                             height="40px"
                             value="a1"
                             color="white"
                             style="min-width:50%; max-width:50%;">등기</v-btn>
                         <v-btn
-                            class="btn; caption"
+                            class="caption"
                             height="40px"
                             value="a2"
                             color="white"
@@ -35,19 +35,19 @@
                             color="green"
                             style="flex-wrap: wrap; min-width:100%; max-width:100%;">
                             <v-btn
-                                class="btn; caption"
+                                class="caption"
                                 height="40px"
                                 value="b1"
                                 color="white"
                                 style="min-width:50%; max-width:50%;">주택</v-btn>
                             <v-btn
-                                class="btn; caption"
+                                class="caption"
                                 height="40px"
                                 value="b2"
                                 color="white"
                                 style="min-width:50%; max-width:50%;">비사업용토지</v-btn>
                             <v-btn
-                                class="btn; caption"
+                                class="caption"
                                 height="40px"
                                 value="b3"
                                 color="white"
@@ -57,50 +57,50 @@
                 </v-list-item>
                 <div v-if="text2=='b1'">
                     <v-list-item>
-                    <v-list-item-content>
-                        <v-col cols="8">
-                            <v-list-item-title class="font-weight-black">일시적 1가구 2주택 조건</v-list-item-title>
-                        </v-col>
-                        <v-col cols="4">
-                            <v-row justify="center">
-                                <v-dialog v-model="dialog" width="600px">
-                                    <template v-slot:activator="{ on }">
-                                        <v-btn color="black" dark="dark" v-on="on">보기</v-btn>
-                                    </template>
-                                    <v-card>
-                                        <v-card-title>
-                                            <span class="headline">일시적 1가구 2주택 조건</span>
-                                        </v-card-title>
-                                        <v-card-text>기존 주택을 새 주택 구입일로부터 3년 이내 (일부 특정 경우에는 5년 이내)에 팔아야 일시적 1가구 2주택 조건을 만족합니다.
-                                        </v-card-text>
-                                        <v-card-actions>
-                                            <v-spacer></v-spacer>
-                                            <v-btn color="green darken-1" text="text" @click="dialog = false">OK</v-btn>
-                                        </v-card-actions>
-                                    </v-card>
-                                </v-dialog>
-                            </v-row>
-                        </v-col>
-                        <v-btn-toggle
-                            v-model="text3"
-                            tile="tile"
-                            color="green"
-                            style="flex-wrap: wrap; min-width:100%; max-width:100%;">
-                            <v-btn
-                                class="btn; caption"
-                                height="40px"
-                                value="c1"
-                                color="white"
-                                style="min-width:50%; max-width:50%;">1주택자(일시적2주택자)</v-btn>
-                            <v-btn
-                                class="btn; caption"
-                                height="40px"
-                                value="c2"
-                                color="white"
-                                style="min-width:50%; max-width:50%;">2주택자이상</v-btn>
-                        </v-btn-toggle>
-                    </v-list-item-content>
-                </v-list-item>
+                        <v-list-item-content>
+                            <v-col cols="8">
+                                <v-list-item-title class="font-weight-black">일시적 1가구 2주택 조건</v-list-item-title>
+                            </v-col>
+                            <v-col cols="4">
+                                <v-row justify="center">
+                                    <v-dialog v-model="dialog" width="600px">
+                                        <template v-slot:activator="{ on }">
+                                            <v-btn color="black" dark="dark" v-on="on">보기</v-btn>
+                                        </template>
+                                        <v-card>
+                                            <v-card-title>
+                                                <span class="headline">일시적 1가구 2주택 조건</span>
+                                            </v-card-title>
+                                            <v-card-text>기존 주택을 새 주택 구입일로부터 3년 이내 (일부 특정 경우에는 5년 이내)에 팔아야 일시적 1가구 2주택 조건을 만족합니다.
+                                            </v-card-text>
+                                            <v-card-actions>
+                                                <v-spacer></v-spacer>
+                                                <v-btn color="green darken-1" text="text" @click="dialog = false">OK</v-btn>
+                                            </v-card-actions>
+                                        </v-card>
+                                    </v-dialog>
+                                </v-row>
+                            </v-col>
+                            <v-btn-toggle
+                                v-model="text3"
+                                tile="tile"
+                                color="green"
+                                style="flex-wrap: wrap; min-width:100%; max-width:100%;">
+                                <v-btn
+                                    class="caption"
+                                    height="40px"
+                                    value="c1"
+                                    color="white"
+                                    style="min-width:50%; max-width:50%;">1주택자(일시적2주택자)</v-btn>
+                                <v-btn
+                                    class="caption"
+                                    height="40px"
+                                    value="c2"
+                                    color="white"
+                                    style="min-width:50%; max-width:50%;">2주택자이상</v-btn>
+                            </v-btn-toggle>
+                        </v-list-item-content>
+                    </v-list-item>
                 </div>
             </div>
 
@@ -118,16 +118,25 @@
                             offset-y="offset-y"
                             min-width="290px">
                             <template v-slot:activator="{ on }">
-                                <v-text-field class="caption" v-model="date" label="양도일선택" readonly="readonly" v-on="on"></v-text-field>
+                                <v-text-field
+                                    class="caption"
+                                    v-model="date"
+                                    label="양도일선택"
+                                    readonly="readonly"
+                                    v-on="on"></v-text-field>
                             </template>
                             <v-date-picker v-model="date" no-title="no-title" scrollable="scrollable">
                                 <v-btn class="caption" text="text" color="primary" @click="menu = false">Cancel</v-btn>
-                                <v-btn class="caption" text="text" color="primary" @click="$refs.menu.save(date)">OK</v-btn>
+                                <v-btn
+                                    class="caption"
+                                    text="text"
+                                    color="primary"
+                                    @click="$refs.menu.save(date)">OK</v-btn>
                             </v-date-picker>
                         </v-menu>
                     </v-col>
                     <v-col cols="6">
-                        <v-text-field class="caption;" placeholder="양도가액" suffix="만원"></v-text-field>
+                        <v-text-field class="caption" placeholder="양도가액" suffix="만원"></v-text-field>
                     </v-col>
 
                     <v-col cols="6">
@@ -140,11 +149,20 @@
                             offset-y="offset-y"
                             min-width="290px">
                             <template v-slot:activator="{ on }">
-                                <v-text-field class="caption" v-model="date2" label="취득일선택" readonly="readonly" v-on="on"></v-text-field>
+                                <v-text-field
+                                    class="caption"
+                                    v-model="date2"
+                                    label="취득일선택"
+                                    readonly="readonly"
+                                    v-on="on"></v-text-field>
                             </template>
                             <v-date-picker v-model="date2" no-title="no-title" scrollable="scrollable">
                                 <v-btn class="caption" text="text" color="primary" @click="menu2 = false">Cancel</v-btn>
-                                <v-btn class="caption" text="text" color="primary" @click="$refs.menu2.save(date)">OK</v-btn>
+                                <v-btn
+                                    class="caption"
+                                    text="text"
+                                    color="primary"
+                                    @click="$refs.menu2.save(date)">OK</v-btn>
                             </v-date-picker>
                         </v-menu>
                     </v-col>
@@ -192,9 +210,6 @@
 </script>
 
 <style scoped="scoped">
-    .btn {
-        border: rgb(220, 226, 233);
-    }
     .being {
         display: flex;
         justify-content: center;

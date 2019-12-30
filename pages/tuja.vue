@@ -5,7 +5,9 @@
                 <v-row justify="end">
                     <v-dialog v-model="dialog" width="600px">
                         <template v-slot:activator="{ on }">
-                            <v-btn color="black" dark="dark" v-on="on">투자 수익률이란?</v-btn>
+                            <v-btn absolute="absolute" color="orange" dark fab="fab" right="right" small="small" v-on="on">
+                                <v-icon small="small">mdi-help</v-icon>
+                            </v-btn>
                         </template>
                         <v-card>
                             <v-card-title>
@@ -17,7 +19,11 @@
                                 </v-card-text>
                                 <v-card-actions>
                                     <v-spacer></v-spacer>
-                                    <v-btn class="caption" color="green darken-1" text="text" @click="dialog = false">OK</v-btn>
+                                    <v-btn
+                                        class="caption"
+                                        color="green darken-1"
+                                        text="text"
+                                        @click="dialog = false">OK</v-btn>
                                 </v-card-actions>
                             </v-card>
                         </v-dialog>
