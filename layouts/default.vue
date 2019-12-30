@@ -47,6 +47,7 @@
     export default {
         data() {
             return {
+                title: 'DDhouseCal',
                 clipped: false,
                 drawer: false,
                 fixed: false,
@@ -54,7 +55,7 @@
                     {
                         icon: 'mdi-apps',
                         title: 'Welcome',
-                        to: '/'
+                        to: '/load'
                     }, {
                         icon: 'mdi-chart-bubble',
                         title: '양도소득세',
@@ -91,7 +92,6 @@
                 ],
                 miniVariant: false,
                 right: true,
-                title: 'DDhouseCal'
             }
         }
     }
