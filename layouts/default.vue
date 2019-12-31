@@ -57,35 +57,35 @@
                         title: 'Welcome',
                         to: '/load'
                     }, {
-                        icon: 'mdi-chart-bubble',
+                        icon: 'mdi-note',
                         title: '양도소득세',
                         to: '/yangdo'
                     }, {
-                        icon: 'mdi-chart-bubble',
+                        icon: 'mdi-domain',
                         title: '등기비용(취득세, 채권)',
                         to: '/chwideug'
                     }, {
-                        icon: 'mdi-chart-bubble',
+                        icon: 'mdi-equalizer',
                         title: '투자수익률',
                         to: '/tuja'
                     }, {
-                        icon: 'mdi-chart-bubble',
+                        icon: 'mdi-subtitles',
                         title: '증여세',
                         to: '/jeungyeo'
                     }, {
-                        icon: 'mdi-chart-bubble',
+                        icon: 'mdi-waves',
                         title: '중개보수료',
                         to: '/joonggae'
                     }, {
-                        icon: 'mdi-chart-bubble',
+                        icon: 'mdi-file',
                         title: '도로명주소',
                         to: '/doro'
                     }, {
-                        icon: 'mdi-chart-bubble',
+                        icon: 'mdi-home',
                         title: '평수 환산',
                         to: '/pyeongsu'
                     }, {
-                        icon: 'mdi-chart-bubble',
+                        icon: 'mdi-calculator',
                         title: '이자 계산기',
                         to: '/iza'
                     }
