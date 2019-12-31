@@ -39,7 +39,6 @@
                 </v-container>
             </v-content>
         </div>
-
     </v-app>
 </template>
 
@@ -55,7 +54,7 @@
                     {
                         icon: 'mdi-apps',
                         title: 'Welcome',
-                        to: '/load'
+                        to: '/'
                     }, {
                         icon: 'mdi-note',
                         title: '양도소득세',

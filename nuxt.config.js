@@ -51,7 +51,15 @@ export default {
     /*
   ** Nuxt.js modules
   */
-    modules: [],
+    modules: [
+      '@nuxtjs/axios',
+    ],
+    axios: {
+      // 모듈 설정
+      //baseURL: process.env.BASE_URL || 'https://www.ddhouse.co.kr/api/v1/public/logging/event'
+    },
+  
+
     /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
