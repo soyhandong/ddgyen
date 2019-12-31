@@ -39,7 +39,12 @@
                         color="blue"
                         group="group"
                         style="flex-wrap: wrap; width: 100%">
-                        <v-btn class="caption" value="a1" height="40px" style="width: 45%">등기</v-btn>
+                        <v-btn
+                            @click="postTest"
+                            class="caption"
+                            value="a1"
+                            height="40px"
+                            style="width: 45%">등기</v-btn>
                         <v-btn class="caption" value="a2" height="40px" style="width: 45%">미등기</v-btn>
                     </v-btn-toggle>
                 </v-list-item-content>
@@ -164,6 +169,9 @@
     </v-layout>
 </template>
 <script>
+    import {mapState, mapActions} from "vuex"
+    import axios from "axios"
+
     export default {
         name: 'yangdo',
         date: new Date()
@@ -180,7 +188,28 @@
                 dialog: false,
                 hidden: false
             }
+        },
+        methods: {
+            postTest() {
+                axios
+                    .post('https://www.ddhouse.co.kr/api/v1/public/calculator/tax-transfer', {
+                        mjws: "m",
+                        asset_type: "house",
+                        price_m: "123",
+                        price_wbo: "",
+                        price_w: "",
+                        price_current: "",
+                        price_premium: ""
+                    })
+                    .then(res => {
+                        console.log(res);
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    });
+            }
         }
+
     }
 </script>
 

@@ -56,7 +56,7 @@ export default {
     ],
     axios: {
       // 모듈 설정
-      //baseURL: process.env.BASE_URL || 'https://www.ddhouse.co.kr/api/v1/public/logging/event'
+      baseURL: process.env.BASE_URL || 'https://www.ddhouse.co.kr/api/v1/public/logging/event'
     },
   
 
