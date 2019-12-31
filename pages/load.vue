@@ -5,7 +5,7 @@
                 <v-flex class="text-center" align-center="align-center">
                     <img src="/rsmalllogo.png" alt="Vuetify.js" class="mb-5"></v-flex>
                     <div class="text-center">
-                        <p>어떤 계산기를 찾고 계신가요?</p>
+                        <p class="font-weight-bold">어떤 계산기를 찾고 계신가요?</p>
                     </div>
                     <v-row no-gutters="no-gutters" style="flex-wrap: wrap;">
                         <v-col
@@ -13,10 +13,9 @@
                             style="min-width:50%; max-width:50%;"
                             class="flex-grow-1 flex-shrink-0; text-center">
                             <v-card
-                                class="pa-2"
+                                class="lining"
                                 outlined="outlined"
                                 tile="tile"
-                                height="150"
                                 nuxt="nuxt"
                                 to="/chwideug">양도소득세</v-card>
                         </v-col>
@@ -25,7 +24,7 @@
                             style="min-width:50%; max-width:50%;"
                             class="flex-grow-1 flex-shrink-0; text-center">
                             <v-card
-                                class="pa-2"
+                                class="lining"
                                 outlined="outlined"
                                 tile="tile"
                                 height="150"
@@ -37,7 +36,7 @@
                             style="min-width:50%; max-width:50%;"
                             class="flex-grow-1 flex-shrink-0; text-center">
                             <v-card
-                                class="pa-2"
+                                class="lining"
                                 outlined="outlined"
                                 tile="tile"
                                 height="150"
@@ -49,7 +48,7 @@
                             style="min-width:50%; max-width:50%;"
                             class="flex-grow-1 flex-shrink-0; text-center">
                             <v-card
-                                class="pa-2"
+                                class="lining"
                                 outlined="outlined"
                                 tile="tile"
                                 height="150"
@@ -61,7 +60,7 @@
                             style="min-width:50%; max-width:50%;"
                             class="flex-grow-1 flex-shrink-0; text-center">
                             <v-card
-                                class="pa-2"
+                                class="lining"
                                 outlined="outlined"
                                 tile="tile"
                                 height="150"
@@ -73,7 +72,7 @@
                             style="min-width:50%; max-width:50%;"
                             class="flex-grow-1 flex-shrink-0; text-center">
                             <v-card
-                                class="pa-2"
+                                class="lining"
                                 outlined="outlined"
                                 tile="tile"
                                 height="150"
@@ -85,7 +84,7 @@
                             style="min-width:50%; max-width:50%;"
                             class="flex-grow-1 flex-shrink-0; text-center">
                             <v-card
-                                class="pa-2"
+                                class="lining"
                                 outlined="outlined"
                                 tile="tile"
                                 height="150"
@@ -97,7 +96,7 @@
                             style="min-width:50%; max-width:50%;"
                             class="flex-grow-1 flex-shrink-0; text-center">
                             <v-card
-                                class="pa-2"
+                                class="lining"
                                 outlined="outlined"
                                 tile="tile"
                                 height="150"
@@ -109,3 +108,12 @@
             </v-layout>
         </v-app>
     </template>
+
+    <style>
+    .lining{
+        height: 150px;
+        line-height: 150px;
+        
+    }
+    
+    </style>
