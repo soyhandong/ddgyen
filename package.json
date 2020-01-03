@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-loader": "^15.8.3"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.9.1",

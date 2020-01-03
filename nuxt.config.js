@@ -78,8 +78,8 @@ export default {
   ** Build configuration
   */
     build: {
-        vender: [
-            'axios'
+        vendor: [
+            'axios', 'vuetify'
         ],
         /*
     ** You can extend webpack config here

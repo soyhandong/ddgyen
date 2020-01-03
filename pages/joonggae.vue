@@ -50,7 +50,7 @@
 
             <v-list-item>
                 <v-list-item-content>
-                    <div v-if="text1=='a1'">
+                    <div v-if="text1==='a1'">
                         <v-row>
                             <v-col cols="4">
                                 <v-subheader class="caption" color="blue darken-4">매매가</v-subheader>
@@ -65,7 +65,7 @@
                             </v-col>
                         </v-row>
                     </div>
-                    <div v-if="(text1=='a2')||(text1=='a3')">
+                    <div v-if="(text1==='a2')||(text1==='a3')">
                         <v-row>
                             <v-col cols="4">
                                 <v-subheader class="caption" color="blue darken-4">보증금</v-subheader>
@@ -91,8 +91,7 @@
                     </div>
                     <div class="being">
                         <v-btn
-                            @click.prevent="submit"
-                            
+                            @click="letspost()"
                             max-width="80%"
                             min-width="80%"
                             color="#2D9527"
@@ -114,18 +113,42 @@
         name: 'jeungyeo',
         data() {
             return {
-                letscal: '',
                 text1: 'a1',
                 text2: 'b1',
-                mjws: null,
-                asset_type: null,
-                price_m: null,
-                price_wbo: null,
-                price_w: null,
-                price_current: null,
-                price_premium: null
+                mjws: '',
+                asset_type: '',
+                price_m: '',
+                price_wbo: '',
+                price_w: '',
+                price_current: '',
+                price_premium: ''
             }
         },
+        computed: {
+            ...mapState(["isLogin", "isLoginError"])
+        },
+        method: {
+            ...mapActions(["login"]),
+            letspost() {
+                axios
+                    .post('https://www.ddhouse.co.kr/api/v1/public/calculator/fee-broker', {
+                        mjws: "m",
+                        asset_type: "house",
+                        price_m: "123",
+                        price_wbo: null,
+                        price_w: null,
+                        price_current: null,
+                        price_premium: null
+                    })
+                    .then(res => {
+                        console.log(res);
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+            }
+
+        }
         /*
         methods: {
             submit(event) {
