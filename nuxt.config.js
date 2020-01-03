@@ -54,11 +54,7 @@ export default {
   ** Nuxt.js modules
   */
 
-    modules: ['@nuxtjs/axios'],
-
-    axios: {
-        // proxyHeaders: false
-    },
+    modules: [],
 
     /*
   ** vuetify module configuration
@@ -83,7 +79,7 @@ export default {
   */
     build: {
         vender: [
-            'axios', 'vuetify'
+            'axios'
         ],
         /*
     ** You can extend webpack config here

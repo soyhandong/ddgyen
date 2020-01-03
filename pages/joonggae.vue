@@ -57,7 +57,8 @@
                             </v-col>
                             <v-col cols="7">
                                 <v-text-field
-                                    price_m="price_m"
+                                    v-model="price_m"
+                                    autofocus="autofocus"
                                     class="caption"
                                     placeholder="매매가 입력"
                                     suffix="만원"></v-text-field>
@@ -71,7 +72,7 @@
                             </v-col>
                             <v-col cols="7">
                                 <v-text-field
-                                    price_wbo="price_wbo"
+                                    v-model="price_wbo"
                                     class="caption"
                                     placeholder="보증금 입력"
                                     suffix="만원"></v-text-field>
@@ -84,13 +85,14 @@
                                 <v-subheader class="caption" color="blue darken-4">월세</v-subheader>
                             </v-col>
                             <v-col cols="7">
-                                <v-text-field price_w="price_w" class="caption" placeholder="월세 입력" suffix="만원"></v-text-field>
+                                <v-text-field v-model="price_w" class="caption" placeholder="월세 입력" suffix="만원"></v-text-field>
                             </v-col>
                         </v-row>
                     </div>
                     <div class="being">
                         <v-btn
-                            @click="postTest"
+                            @click.prevent="submit"
+                            
                             max-width="80%"
                             min-width="80%"
                             color="#2D9527"
@@ -112,6 +114,7 @@
         name: 'jeungyeo',
         data() {
             return {
+                letscal: '',
                 text1: 'a1',
                 text2: 'b1',
                 mjws: null,
@@ -123,23 +126,15 @@
                 price_premium: null
             }
         },
+        /*
         methods: {
-            postTest({
-                commit
-            }, sObj) {
-                axios
-                    .post(
-                        'https://www.ddhouse.co.kr/api/v1/public/calculator/fee-broker',
-                        sobj
-                    )
-                    .then(res => {
-                        console.log(res);
-                    })
-                    .catch(err => {
-                        console.log(err);
-                    });
+            submit(event) {
+                this
+                    .$router
+                    .push(`results/${this.letscal}`)
             }
         }
+*/
     }
 </script>
 

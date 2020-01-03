@@ -65,7 +65,7 @@
                                 tile="tile"
                                 height="150"
                                 nuxt="nuxt"
-                                to="/goonggae">중개보수료</v-card>
+                                to="/joonggae">중개보수료</v-card>
                         </v-col>
                         <v-col
                             cols="1"
