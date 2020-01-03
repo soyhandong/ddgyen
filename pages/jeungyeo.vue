@@ -61,11 +61,36 @@
                                                                                     color="blue"
                                                                                     group="group"
                                                                                     style="flex-wrap: wrap; width: 100%">
-                                                                                    <v-btn class="caption" value="a1" height="40px" style="width: 45%">배우자</v-btn>
-                                                                                    <v-btn class="caption" value="a2" height="40px" style="width: 45%">직계존속</v-btn>
-                                                                                    <v-btn class="caption" value="a3" height="40px" style="width: 30%">직계비속</v-btn>
-                                                                                    <v-btn class="caption" value="a4" height="40px" style="width: 30%">기타친족</v-btn>
-                                                                                    <v-btn class="caption" value="a5" height="40px" style="width: 30%">타인</v-btn>
+                                                                                    <v-btn
+                                                                                        class="caption"
+                                                                                        giver="couple"
+                                                                                        value="a1"
+                                                                                        height="40px"
+                                                                                        style="width: 45%">배우자</v-btn>
+                                                                                    <v-btn
+                                                                                        class="caption"
+                                                                                        giver="parent"
+                                                                                        value="a2"
+                                                                                        height="40px"
+                                                                                        style="width: 45%">직계존속</v-btn>
+                                                                                    <v-btn
+                                                                                        class="caption"
+                                                                                        giver="child"
+                                                                                        value="a3"
+                                                                                        height="40px"
+                                                                                        style="width: 30%">직계비속</v-btn>
+                                                                                    <v-btn
+                                                                                        class="caption"
+                                                                                        giver="family"
+                                                                                        value="a4"
+                                                                                        height="40px"
+                                                                                        style="width: 30%">기타친족</v-btn>
+                                                                                    <v-btn
+                                                                                        class="caption"
+                                                                                        giver="other"
+                                                                                        value="a5"
+                                                                                        height="40px"
+                                                                                        style="width: 30%">타인</v-btn>
                                                                                 </v-btn-toggle>
                                                                             </v-list-item-content>
                                                                         </v-list-item>
@@ -79,8 +104,18 @@
                                                                                         color="blue"
                                                                                         group="group"
                                                                                         style="flex-wrap: wrap; width: 100%">
-                                                                                        <v-btn class="caption" value="b1" height="40px" style="width: 45%">성년</v-btn>
-                                                                                        <v-btn class="caption" value="b2" height="40px" style="width: 45%">미성년</v-btn>
+                                                                                        <v-btn
+                                                                                            class="caption"
+                                                                                            receiver_age="adult"
+                                                                                            value="b1"
+                                                                                            height="40px"
+                                                                                            style="width: 45%">성년</v-btn>
+                                                                                        <v-btn
+                                                                                            class="caption"
+                                                                                            receiver_age="children"
+                                                                                            value="b2"
+                                                                                            height="40px"
+                                                                                            style="width: 45%">미성년</v-btn>
                                                                                     </v-btn-toggle>
                                                                                 </v-list-item-content>
                                                                             </v-list-item>
@@ -95,8 +130,18 @@
                                                                                         color="blue"
                                                                                         group="group"
                                                                                         style="flex-wrap: wrap; width: 100%">
-                                                                                        <v-btn class="caption" value="c1" height="40px" style="width: 45%">세대 생략인 경우</v-btn>
-                                                                                        <v-btn class="caption" value="c2" height="40px" style="width: 45%">세대 생략이 아닌 경우</v-btn>
+                                                                                        <v-btn
+                                                                                            class="caption"
+                                                                                            receiver_relation="exclude"
+                                                                                            value="c1"
+                                                                                            height="40px"
+                                                                                            style="width: 45%">세대 생략인 경우</v-btn>
+                                                                                        <v-btn
+                                                                                            class="caption"
+                                                                                            receiver_relation="include"
+                                                                                            value="c2"
+                                                                                            height="40px"
+                                                                                            style="width: 45%">세대 생략이 아닌 경우</v-btn>
                                                                                     </v-btn-toggle>
                                                                                 </v-list-item-content>
                                                                             </v-list-item>
@@ -105,10 +150,10 @@
                                                                             <v-list-item-content>
                                                                                 <p class="font-weight-black">증여금액</p>
                                                                                 <v-col cols="4">
-                                                                                    <v-subheader class="caption" color="blue darken-4">취득가액</v-subheader>
+                                                                                    <v-subheader class="caption" color="blue darken-4">증여금액</v-subheader>
                                                                                 </v-col>
                                                                                 <v-col cols="7">
-                                                                                    <v-text-field class="caption" placeholder="증명금액 입력" suffix="만원"></v-text-field>
+                                                                                    <v-text-field class="caption" price="price" placeholder="증여금액 입력" suffix="만원"></v-text-field>
                                                                                 </v-col>
 
                                                                                 <div class="being">
@@ -125,7 +170,16 @@
                                                                 export default {
                                                                     name: 'jeungyeo',
                                                                     data() {
-                                                                        return {text1: 'a1', text2: 'b1', text3: 'c1', dialog: false}
+                                                                        return {
+                                                                            text1: 'a1',
+                                                                            text2: 'b1',
+                                                                            text3: 'c1',
+                                                                            dialog: false,
+                                                                            giver: null,
+                                                                            price: null,
+                                                                            receiver_relation: null,
+                                                                            receiver_age: null
+                                                                        }
                                                                     }
                                                                 }
                                                             </script>

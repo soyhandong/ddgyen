@@ -3,7 +3,14 @@
         <v-flex wrap="wrap">
             <v-dialog v-model="dialog" width="600px">
                 <template v-slot:activator="{ on }">
-                    <v-btn absolute="absolute" color="orange" dark fab="fab" right="right" small="small" v-on="on">
+                    <v-btn
+                        absolute="absolute"
+                        color="orange"
+                        dark="dark"
+                        fab="fab"
+                        right="right"
+                        small="small"
+                        v-on="on">
                         <v-icon small="small">mdi-help</v-icon>
                     </v-btn>
                 </template>
@@ -39,9 +46,24 @@
                                                 color="blue"
                                                 group="group"
                                                 style="flex-wrap: wrap; width: 100%">
-                                                <v-btn class="caption" value="a1" height="40px" style="width: 45%">주택</v-btn>
-                                                <v-btn class="caption" value="a2" height="40px" style="width: 45%">농지</v-btn>
-                                                <v-btn class="caption" value="a3" height="40px" style="width: 90%">토지,건물,오피스텔</v-btn>
+                                                <v-btn
+                                                    class="caption"
+                                                    asset_type="house"
+                                                    value="a1"
+                                                    height="40px"
+                                                    style="width: 45%">주택</v-btn>
+                                                <v-btn
+                                                    class="caption"
+                                                    asset_type="land"
+                                                    value="a2"
+                                                    height="40px"
+                                                    style="width: 45%">농지</v-btn>
+                                                <v-btn
+                                                    class="caption"
+                                                    asset_type="farm"
+                                                    value="a3"
+                                                    height="40px"
+                                                    style="width: 90%">토지,건물,오피스텔</v-btn>
                                             </v-btn-toggle>
                                         </v-list-item-content>
                                     </v-list-item>
@@ -55,12 +77,28 @@
                                                 color="blue"
                                                 group="group"
                                                 style="flex-wrap: wrap; width: 100%">
-                                                <v-btn class="caption" value="b1" height="40px" style="width: 22.5%">매매</v-btn>
-                                                <v-btn class="caption" value="b2" height="40px" style="width: 22.5%">증여</v-btn>
-                                                <v-btn class="caption" value="b3" height="40px" style="width: 22.5%">상속</v-btn>
+                                                <v-btn
+                                                    class="caption"
+                                                    kind="meme"
+                                                    value="b1"
+                                                    height="40px"
+                                                    style="width: 22.5%">매매</v-btn>
+                                                <v-btn
+                                                    class="caption"
+                                                    kind="gift"
+                                                    value="b2"
+                                                    height="40px"
+                                                    style="width: 22.5%">증여</v-btn>
+                                                <v-btn
+                                                    class="caption"
+                                                    kind="inherit"
+                                                    value="b3"
+                                                    height="40px"
+                                                    style="width: 22.5%">상속</v-btn>
                                                 <v-btn
                                                     v-if="(text1=='a1')||(text1=='a3')"
                                                     class="caption"
+                                                    kind="build"
                                                     value="b4"
                                                     height="40px"
                                                     style="width: 22.5%">신축</v-btn>
@@ -79,8 +117,8 @@
                                                     color="blue"
                                                     group="group"
                                                     style="flex-wrap: wrap; width: 100%">
-                                                    <v-btn class="caption" value="c1" height="40px" style="width: 90%">85m^2 이하(읍, 면지역은 100m^2)</v-btn>
-                                                    <v-btn class="caption" value="c2" height="40px" style="width: 90%">85m^2 초과(읍, 면지역은 100m^2)</v-btn>
+                                                    <v-btn class="caption" area="small" value="c1" height="40px" style="width: 90%">85m^2 이하(읍, 면지역은 100m^2)</v-btn>
+                                                    <v-btn class="caption" area="large" value="c2" height="40px" style="width: 90%">85m^2 초과(읍, 면지역은 100m^2)</v-btn>
                                                 </v-btn-toggle>
                                             </v-list-item-content>
                                         </v-list-item>
@@ -95,8 +133,18 @@
                                                     color="blue"
                                                     group="group"
                                                     style="flex-wrap: wrap; width: 100%">
-                                                    <v-btn class="caption" value="d1" height="40px" style="width: 45%">신규</v-btn>
-                                                    <v-btn class="caption" value="d2" height="40px" style="width: 45%">2년 이상 자경</v-btn>
+                                                    <v-btn
+                                                        class="caption"
+                                                        farm_type="new"
+                                                        value="d1"
+                                                        height="40px"
+                                                        style="width: 45%">신규</v-btn>
+                                                    <v-btn
+                                                        class="caption"
+                                                        farm_type="farming"
+                                                        value="d2"
+                                                        height="40px"
+                                                        style="width: 45%">2년 이상 자경</v-btn>
                                                 </v-btn-toggle>
                                             </v-list-item-content>
                                         </v-list-item>
@@ -108,7 +156,7 @@
                                                 <v-subheader class="caption" color="blue darken-4">취득가액</v-subheader>
                                             </v-col>
                                             <v-col cols="7">
-                                                <v-text-field class="caption" placeholder="취득가액 입력" suffix="만원"></v-text-field>
+                                                <v-text-field class="caption" price="price" placeholder="취득가액 입력" suffix="만원"></v-text-field>
                                             </v-col>
 
                                             <div class="being">
@@ -125,7 +173,18 @@
                             export default {
                                 name: 'chwideug',
                                 data() {
-                                    return {text1: 'a1', text2: 'b1', text3: 'c1', text4: 'd1', dialog: false}
+                                    return {
+                                        text1: 'a1',
+                                        text2: 'b1',
+                                        text3: 'c1',
+                                        text4: 'd1',
+                                        dialog: false,
+                                        asset_type: null,
+                                        kind: null,
+                                        area: null,
+                                        price: null,
+                                        farm_type: null
+                                    }
                                 }
                             }
                         </script>

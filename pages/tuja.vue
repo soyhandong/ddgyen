@@ -5,7 +5,14 @@
                 <v-row justify="end">
                     <v-dialog v-model="dialog" width="600px">
                         <template v-slot:activator="{ on }">
-                            <v-btn absolute="absolute" color="orange" dark fab="fab" right="right" small="small" v-on="on">
+                            <v-btn
+                                absolute="absolute"
+                                color="orange"
+                                dark="dark"
+                                fab="fab"
+                                right="right"
+                                small="small"
+                                v-on="on">
                                 <v-icon small="small">mdi-help</v-icon>
                             </v-btn>
                         </template>
@@ -34,7 +41,11 @@
                         <v-subheader class="caption" color="green darken-4">매수가격</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field class="caption" placeholder="부동산을 매수할 금액" suffix="만원"></v-text-field>
+                        <v-text-field
+                            class="caption"
+                            price_m="price_m"
+                            placeholder="부동산을 매수할 금액"
+                            suffix="만원"></v-text-field>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -42,7 +53,11 @@
                         <v-subheader class="caption" color="green darken-4">투입자본</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field class="caption" placeholder="투입할 자본금액" suffix="만원"></v-text-field>
+                        <v-text-field
+                            class="caption"
+                            price_invest="price_invest"
+                            placeholder="투입할 자본금액"
+                            suffix="만원"></v-text-field>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -50,7 +65,11 @@
                         <v-subheader class="caption" color="green darken-4">보증금</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field class="caption" placeholder="임대 보증금" suffix="만원"></v-text-field>
+                        <v-text-field
+                            class="caption"
+                            price_wbo="price_wbo"
+                            placeholder="임대 보증금"
+                            suffix="만원"></v-text-field>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -58,7 +77,7 @@
                         <v-subheader class="caption" color="green darken-4">월세</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field class="caption" placeholder="월 임대료" suffix="만원"></v-text-field>
+                        <v-text-field class="caption" price_w="price_w" placeholder="월 임대료" suffix="만원"></v-text-field>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -66,7 +85,7 @@
                         <v-subheader class="caption" color="green darken-4">대출 금리</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field class="caption" placeholder="이자율" suffix="(연 %)"></v-text-field>
+                        <v-text-field class="caption" rate="rate" placeholder="이자율" suffix="(연 %)"></v-text-field>
                     </v-col>
                 </v-row>
 
@@ -79,7 +98,12 @@
 
     </template>
     <script>
-        export default {name: 'yangdo'}
+        export default {
+            name: 'yangdo',
+            data() {
+                return {price_m: null, price_invest: null, price_wbo: null, price_w: null, rate: null}
+            }
+        }
     </script>
 
     <style scoped="scoped">

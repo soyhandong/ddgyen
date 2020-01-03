@@ -35,17 +35,23 @@
                     <p class="font-weight-black">대상물의 등기 여부</p>
                     <v-btn-toggle
                         v-model="text"
+                        mjws="m"
                         tile="tile"
                         color="blue"
                         group="group"
                         style="flex-wrap: wrap; width: 100%">
                         <v-btn
-                            @click="postTest"
                             class="caption"
+                            registration="yes"
                             value="a1"
                             height="40px"
                             style="width: 45%">등기</v-btn>
-                        <v-btn class="caption" value="a2" height="40px" style="width: 45%">미등기</v-btn>
+                        <v-btn
+                            class="caption"
+                            registration="no"
+                            value="a2"
+                            height="40px"
+                            style="width: 45%">미등기</v-btn>
                     </v-btn-toggle>
                 </v-list-item-content>
             </v-list-item>
@@ -60,9 +66,24 @@
                             color="blue"
                             group="group"
                             style="flex-wrap: wrap; width: 100%">
-                            <v-btn class="caption" value="b1" height="40px" style="width: 45%">주택</v-btn>
-                            <v-btn class="caption" value="b2" height="40px" style="width: 45%">비사업용토지</v-btn>
-                            <v-btn class="caption" value="b3" height="40px" style="width: 90%">기타 부동산(사업용 토지, 분양권 등)</v-btn>
+                            <v-btn
+                                class="caption"
+                                asset_type="house"
+                                value="b1"
+                                height="40px"
+                                style="width: 45%">주택</v-btn>
+                            <v-btn
+                                class="caption"
+                                asset_type="land"
+                                value="b2"
+                                height="40px"
+                                style="width: 45%">비사업용토지</v-btn>
+                            <v-btn
+                                class="caption"
+                                asset_type="etc"
+                                value="b3"
+                                height="40px"
+                                style="width: 90%">기타 부동산(사업용 토지, 분양권 등)</v-btn>
                         </v-btn-toggle>
                     </v-list-item-content>
                 </v-list-item>
@@ -78,8 +99,18 @@
                                 color="blue"
                                 group="group"
                                 style="flex-wrap: wrap; width: 100%">
-                                <v-btn class="caption" value="c1" height="40px" style="width: 45%">1주택자(일시적2주택자)</v-btn>
-                                <v-btn class="caption" value="c2" height="40px" style="width: 45%">2주택자이상</v-btn>
+                                <v-btn
+                                    class="caption"
+                                    house_count="one"
+                                    value="c1"
+                                    height="40px"
+                                    style="width: 45%">1주택자(일시적2주택자)</v-btn>
+                                <v-btn
+                                    class="caption"
+                                    house_count="two"
+                                    value="c2"
+                                    height="40px"
+                                    style="width: 45%">2주택자이상</v-btn>
                             </v-btn-toggle>
                         </v-list-item-content>
                     </v-list-item>
@@ -101,6 +132,7 @@
                             <template v-slot:activator="{ on }">
                                 <v-text-field
                                     class="caption"
+                                    date_buy="date_buy"
                                     v-model="date"
                                     label="양도일선택"
                                     readonly="readonly"
@@ -117,7 +149,11 @@
                         </v-menu>
                     </v-col>
                     <v-col cols="6">
-                        <v-text-field class="caption" placeholder="양도가액" suffix="만원"></v-text-field>
+                        <v-text-field
+                            class="caption"
+                            price_buy="price_buy"
+                            placeholder="양도가액"
+                            suffix="만원"></v-text-field>
                     </v-col>
 
                     <v-col cols="6">
@@ -132,6 +168,7 @@
                             <template v-slot:activator="{ on }">
                                 <v-text-field
                                     class="caption"
+                                    date_transfer="date_transfer"
                                     v-model="date2"
                                     label="취득일선택"
                                     readonly="readonly"
@@ -148,18 +185,31 @@
                         </v-menu>
                     </v-col>
                     <v-col cols="6">
-                        <v-text-field class="caption" placeholder="취득가액" suffix="만원"></v-text-field>
+                        <v-text-field
+                            class="caption"
+                            price_transfer="price_transfer"
+                            placeholder="취득가액"
+                            suffix="만원"></v-text-field>
                     </v-col>
 
                     <v-col cols="4">
                         <v-subheader class="caption" color="green darken-4">소요경비</v-subheader>
                     </v-col>
                     <v-col cols="7">
-                        <v-text-field class="caption" placeholder="소요경비 입력" suffix="만원"></v-text-field>
+                        <v-text-field
+                            class="caption"
+                            price_etc="price_etc"
+                            placeholder="소요경비 입력"
+                            suffix="만원"></v-text-field>
                     </v-col>
 
                     <div class="being">
-                        <v-btn max-width="80%" min-width="80%" color="#2D9527" dark="dark">계산하기</v-btn>
+                        <v-btn
+                            @click="postTest"
+                            max-width="80%"
+                            min-width="80%"
+                            color="#2D9527"
+                            dark="dark">계산하기</v-btn>
                     </div>
 
                 </v-list-item-content>
@@ -186,7 +236,15 @@
                 menu: false,
                 menu2: false,
                 dialog: false,
-                hidden: false
+                hidden: false,
+                registration: null,
+                asset_type: null,
+                house_count: null,
+                date_buy: null,
+                price_buy: null,
+                date_transfer: null,
+                price_transfer: null,
+                price_etc: null
             }
         },
         methods: {

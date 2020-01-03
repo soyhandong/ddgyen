@@ -110,10 +110,9 @@
     </template>
 
     <style>
-    .lining{
-        height: 150px;
-        line-height: 150px;
-        
-    }
-    
+        .lining {
+            height: 150px;
+            line-height: 150px;
+
+        }
     </style>

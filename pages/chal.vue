@@ -4,13 +4,10 @@
     </v-container>
 </template>
 <script>
-export default {
-    name: 'ParticlesBackground',
-}
+    export default {name: 'ParticlesBackground'}
 </script>
 
-
-<style scoped>
+<style scoped="scoped">
     .gcolor {
         background: #2D9527;
     }

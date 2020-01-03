@@ -34,31 +34,31 @@ export default {
     loading: {
         color: '#fff'
     },
-    /*
+    /*`
   ** Global CSS
   */
-    css: [
-      
-    ],
+    css: [],
     /*
   ** Plugins to load before mounting the App
   */
     plugins: [],
+    css: [],
     /*
   ** Nuxt.js dev-modules
   */
     buildModules: ['@nuxtjs/vuetify'],
+    vuetify: {
+        /* module options */
+    },
     /*
   ** Nuxt.js modules
   */
-    modules: [
-      '@nuxtjs/axios',
-    ],
+
+    modules: ['@nuxtjs/axios'],
+
     axios: {
-      // 모듈 설정
-      baseURL: process.env.BASE_URL || 'https://www.ddhouse.co.kr/api/v1/public/logging/event'
+        // proxyHeaders: false
     },
-  
 
     /*
   ** vuetify module configuration
@@ -66,15 +66,15 @@ export default {
   */
     vuetify: {
         customVariables: ['~/assets/variables.scss'],
-        theme: { light:false,
+        theme: {
+            light: false,
             themes: {
-              light: {
-                primary: colors.white,
-                secondary: colors.white,
-                accent: '#2D9527',
-                error: colors.red.accent3,
-                
-              },
+                light: {
+                    primary: colors.white,
+                    secondary: colors.white,
+                    accent: '#2D9527',
+                    error: colors.red.accent3
+                }
             }
         }
     },
@@ -82,6 +82,9 @@ export default {
   ** Build configuration
   */
     build: {
+        vender: [
+            'axios', 'vuetify'
+        ],
         /*
     ** You can extend webpack config here
     */

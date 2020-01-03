@@ -1,6 +1,6 @@
 <template>
     <v-layout column="column" row="row">
-        <v-flex wrap="wrap"> 
+        <v-flex wrap="wrap">
             <v-list-item>
                 <v-list-item-content>
                     <v-text-field class="caption" placeholder="지번, 건물명, 도로명 입력"></v-text-field>
